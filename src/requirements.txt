@@ -1,0 +1,5 @@
+streamlit
+alembic
+wordcloud
+sqlalchemy
+matplotlib
