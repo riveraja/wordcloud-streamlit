@@ -1,13 +1,10 @@
 import streamlit as st
 from sqlalchemy.sql import text
 
-st.set_page_config(
-    page_title="Streamlit App",
-    layout="wide"
-)
+st.set_page_config(page_title="Streamlit App", layout="wide")
 
 # sqlite connection
-conn = st.connection('sqlite3',type='sql',ttl=10)
+conn = st.connection("sqlite3", type="sql", ttl=10)
 
 with conn.session as c:
     c.execute(text("CREATE TABLE IF NOT EXISTS questions (question TEXT);"))
