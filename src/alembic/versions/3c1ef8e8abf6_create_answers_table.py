@@ -12,15 +12,15 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision: str = '3c1ef8e8abf6'
-down_revision: Union[str, None] = 'e7151094aafd'
+revision: str = "3c1ef8e8abf6"
+down_revision: Union[str, None] = "e7151094aafd"
 branch_labels: Union[str, Sequence[str], None] = None
 depends_on: Union[str, Sequence[str], None] = None
 
 
 def upgrade() -> None:
-    op.execute('CREATE TABLE IF NOT EXISTS answers (qid INTEGER, answer TEXT);')
+    op.execute("CREATE TABLE IF NOT EXISTS answers (qid INTEGER, answer TEXT);")
 
 
 def downgrade() -> None:
-    op.drop_table('answers')
+    op.drop_table("answers")
