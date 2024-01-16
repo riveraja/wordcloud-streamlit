@@ -1,9 +1,12 @@
-name: Black Diff
+name: Black
 
-on: [push]
+on: 
+  push:
+    branches:
+      - '!master'
 
 jobs:
-  format:
+  format-check:
     runs-on: ubuntu-latest
     
     steps:
