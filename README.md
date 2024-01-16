@@ -20,7 +20,12 @@ DOCKER_BUILDKIT=1 docker build --no-cache -t wordcloud-streamlit .
 Start the docker container
 
 ```
-docker run --rm --name wordcloud -p 8501:8501 wordcloud-streamlit
+docker run --rm \
+    --name wordcloud \
+    -p 8501:8501 \
+    -v ./streamlit_config/config.toml:${pwd}/.streamlit/config.toml \
+    -v ./streamlit_config/secrets.toml.sample:${pwd}/.streamlit/secrets.toml \
+    wordcloud-streamlit
 ```
 
 Open browser and visit URL

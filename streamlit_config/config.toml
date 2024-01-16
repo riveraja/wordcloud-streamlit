@@ -1,0 +1,26 @@
+[server]
+port = 8501
+address = 0.0.0.0
+headless = true
+runOnSave = false
+baseUrlPath = ""
+enableCORS = true
+enableXsrfProtection = true
+
+[browser]
+gatherUsageStats = false
+
+[logger]
+level = "info"
+messageFormat = "%{asctime}s %{message}s"
+
+[client]
+showErrorDetails = true
+toolbarMode = "viewer"
+
+[runner]
+magicEnabled = true
+fastReruns = true
+enforceSerializableSessionState = false
+
+[deprecation]
